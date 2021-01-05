@@ -28,7 +28,6 @@ public class Order implements Serializable{
 	private Double longitude;
 	private Instant moment;
 	private OrderStatus status;
-	private Double total;
 	
 	@ManyToMany
 	@JoinTable(name = "tb_order_product", 
@@ -48,7 +47,6 @@ public class Order implements Serializable{
 		this.longitude = longitude;
 		this.moment = moment;
 		this.status = status;
-		this.total = total;
 	}
 
 	public Long getId() {
@@ -97,14 +95,6 @@ public class Order implements Serializable{
 
 	public void setStatus(OrderStatus status) {
 		this.status = status;
-	}
-
-	public Double getTotal() {
-		return total;
-	}
-
-	public void setTotal(Double total) {
-		this.total = total;
 	}
 
 	public Set<Product> getProducts() {
