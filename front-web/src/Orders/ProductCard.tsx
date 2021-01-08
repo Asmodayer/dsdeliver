@@ -1,4 +1,3 @@
-import { format } from 'path';
 import { Product } from './types';
 
 type Props = {
